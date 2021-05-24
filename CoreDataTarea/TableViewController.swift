@@ -85,11 +85,50 @@ class TableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = courses[indexPath.row]
+        performSegue(withIdentifier: "addCourse", sender: course)
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        courses.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let btnUpdate = UITableViewRowAction(style: .normal, title: "Actualizar") {
+         (actionRow, indexRow) in
+            let course = self.courses[indexPath.row]
+            self.performSegue(withIdentifier: "addCourse", sender: course)
+        }
+        btnUpdate.backgroundColor = UIColor.systemBlue
 
+        let btnDelete = UITableViewRowAction(style: .normal, title: "Eliminar") {
+         (actionRow, indexRow) in
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(self.courses.remove(at: indexPath.row))
+            tableView.reloadData()
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+        btnDelete.backgroundColor = UIColor.black
+        
+        self.navigationController?.popViewController(animated: true)
+        tableView.reloadData()
+
+        return[btnUpdate, btnDelete]
+    }
+    
+    @IBAction func actionCell(_ sender: Any) {
+        if tableView.isEditing {
+            tableView.isEditing = false
+        } else {
+            tableView.isEditing = true
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let afterVC = segue.destination as! ViewController
+        afterVC.course = sender as? Course
     }
 
 }

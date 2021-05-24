@@ -88,14 +88,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMr-R5-Zci">
-                                <rect key="frame" x="169" y="629" width="76" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Agregar"/>
-                                <connections>
-                                    <action selector="btnAddCourse:" destination="4GQ-f5-NSe" eventType="touchUpInside" id="8CU-Wm-p4n"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQy-Us-0xt">
                                 <rect key="frame" x="178" y="160" width="58" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -107,11 +99,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMr-R5-Zci">
+                                <rect key="frame" x="127" y="629" width="160" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="btnAddCourse:" destination="4GQ-f5-NSe" eventType="touchUpInside" id="8CU-Wm-p4n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hEb-Dz-xo8" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="115" id="0zp-lY-plx"/>
                             <constraint firstItem="hEb-Dz-xo8" firstAttribute="top" secondItem="XMg-3e-OEF" secondAttribute="bottom" constant="20" id="1ua-6h-BOD"/>
+                            <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="SMr-R5-Zci" secondAttribute="trailing" constant="127" id="7K6-Q4-hY7"/>
                             <constraint firstItem="XMg-3e-OEF" firstAttribute="top" secondItem="WfJ-Wt-Lfs" secondAttribute="bottom" constant="35" id="9Av-mq-xEF"/>
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="Z3R-gq-eZx" secondAttribute="trailing" constant="115" id="9bt-N4-X9C"/>
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="WFe-XR-gDx" secondAttribute="trailing" constant="115" id="DPe-sl-dcL"/>
@@ -121,10 +122,8 @@
                             <constraint firstItem="wqI-h8-JSh" firstAttribute="top" secondItem="hEb-Dz-xo8" secondAttribute="bottom" constant="35" id="S0R-Ov-0VK"/>
                             <constraint firstItem="HIi-ep-cu7" firstAttribute="top" secondItem="wqI-h8-JSh" secondAttribute="bottom" constant="20" id="U9F-xr-1Ju"/>
                             <constraint firstItem="wqI-h8-JSh" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="144" id="cUl-lZ-BeW"/>
-                            <constraint firstItem="SMr-R5-Zci" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="169" id="cWi-8R-3cA"/>
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="hEb-Dz-xo8" secondAttribute="trailing" constant="115" id="eeL-97-rIG"/>
                             <constraint firstItem="WfJ-Wt-Lfs" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="115" id="fDR-KS-efh"/>
-                            <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="SMr-R5-Zci" secondAttribute="trailing" constant="169" id="fHZ-Mf-qOR"/>
                             <constraint firstItem="WFe-XR-gDx" firstAttribute="top" secondItem="Z3R-gq-eZx" secondAttribute="bottom" constant="35" id="g8K-tO-ioR"/>
                             <constraint firstItem="XMg-3e-OEF" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="100" id="hVO-cY-Zgv"/>
                             <constraint firstItem="VQy-Us-0xt" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="178" id="iHK-xB-kB9"/>
@@ -136,12 +135,14 @@
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="WfJ-Wt-Lfs" secondAttribute="trailing" constant="115" id="to8-kK-CVh"/>
                             <constraint firstItem="WfJ-Wt-Lfs" firstAttribute="top" secondItem="WFe-XR-gDx" secondAttribute="bottom" constant="20" id="wJ1-Jh-TTO"/>
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="XMg-3e-OEF" secondAttribute="trailing" constant="99" id="x3P-cw-aJu"/>
+                            <constraint firstItem="SMr-R5-Zci" firstAttribute="leading" secondItem="cHr-DO-eYW" secondAttribute="leading" constant="127" id="yga-lH-gVw"/>
                             <constraint firstItem="cHr-DO-eYW" firstAttribute="trailing" secondItem="HIi-ep-cu7" secondAttribute="trailing" constant="115" id="zrd-pW-XME"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cHr-DO-eYW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Agregar Curso" id="Diz-gb-3PD"/>
                     <connections>
+                        <outlet property="btnInsertCourse" destination="SMr-R5-Zci" id="1WG-ec-c6K"/>
                         <outlet property="txtAverageE" destination="WfJ-Wt-Lfs" id="Dad-e1-cf4"/>
                         <outlet property="txtAverageL" destination="hEb-Dz-xo8" id="agt-dP-y0d"/>
                         <outlet property="txtFinalE" destination="HIi-ep-cu7" id="2Zx-at-bTD"/>
